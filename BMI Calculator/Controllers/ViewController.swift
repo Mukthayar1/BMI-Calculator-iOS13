@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var HeightValue: UILabel!
     @IBOutlet weak var WeightValue: UILabel!
     
+    @IBOutlet weak var HeightSliderValue: UISlider!
+    @IBOutlet weak var WeightSliderValue: UISlider!
+    
     @IBAction func HeightSliderChange(_ sender: UISlider) {
         print(String(format: "%.0f",sender.value))
         HeightValue.text = String(format: "%.2f",sender.value)
@@ -28,6 +31,11 @@ class ViewController: UIViewController {
     @IBAction func WeightSliderChange(_ sender: UISlider) {
         WeightValue.text = String(format: "%.2f",sender.value)
 
+    }
+    @IBAction func CalculateBMi(_ sender: UIButton) {
+        let BMI = WeightSliderValue.value / pow(HeightSliderValue.value,2 )
+        
+        print("YOUR BMI IS = \(String(format:"%.2f",BMI))")
     }
 }
 

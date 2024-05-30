@@ -88,7 +88,6 @@
                                         <color key="thumbTintColor" red="0.4549019608" green="0.44705882349999998" blue="0.82352941180000006" alpha="0.50481592470000003" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="WeightSliderChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Bp0-qx-aWc"/>
-                                            <action selector="WeightSliderValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="FOc-6K-o1P"/>
                                         </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F0-S2-2nc">
@@ -107,6 +106,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="CalculateBMi:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hgp-eW-62o"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -125,7 +127,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="HeightSliderValue" destination="Pky-qY-oVp" id="4Kh-Tn-RHj"/>
                         <outlet property="HeightValue" destination="Xcz-1j-2c9" id="hqq-Fa-sNY"/>
+                        <outlet property="WeightSliderValue" destination="s2X-C5-Zcz" id="zKn-i7-dhZ"/>
                         <outlet property="WeightValue" destination="LTF-aL-8qu" id="vFR-vK-urB"/>
                     </connections>
                 </viewController>
